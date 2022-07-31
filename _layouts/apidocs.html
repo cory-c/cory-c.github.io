@@ -1,0 +1,108 @@
+---
+layout: page
+# The Home page layout
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="SwaggerUI"
+  />
+  <title>SwaggerUI</title>
+  <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui.css" />
+</head>
+<body>
+<div id="swagger-ui"></div>
+<script src="https://unpkg.com/swagger-ui-dist@4.5.0/swagger-ui-bundle.js" crossorigin></script>
+<script>
+  window.onload = () => {
+    window.ui = SwaggerUIBundle({
+      url: 'https://petstore3.swagger.io/api/v3/openapi.json',
+      dom_id: '#swagger-ui',
+    });
+  };
+</script>
+</body>
+</html>
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--  <title>ReDoc Demo: Multiple apis</title>-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--  <style>-->
+<!--    body {-->
+<!--      margin: 0;-->
+<!--      padding-top: 40px;-->
+<!--    }-->
+
+<!--    nav {-->
+<!--      position: fixed;-->
+<!--      top: 0;-->
+<!--      width: 100%;-->
+<!--      z-index: 100;-->
+<!--    }-->
+<!--    #links_container {-->
+<!--      margin: 0;-->
+<!--      padding: 0;-->
+<!--      background-color: #0033a0;-->
+<!--    }-->
+
+<!--    #links_container li {-->
+<!--      display: inline-block;-->
+<!--      padding: 10px;-->
+<!--      color: white;-->
+<!--      cursor: pointer;-->
+<!--    }-->
+<!--  </style>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--&lt;!&ndash; Top navigation placeholder &ndash;&gt;-->
+<!--<nav>-->
+<!--  <ul id="links_container">-->
+<!--  </ul>-->
+<!--</nav>-->
+
+<!--<redoc scroll-y-offset="body > nav"></redoc>-->
+
+<!--<script src="https://rebilly.github.io/ReDoc/releases/v1.x.x/redoc.min.js"> </script>-->
+<!--<script>-->
+<!--  // list of APIS-->
+<!--  var apis = [-->
+<!--    {-->
+<!--      name: 'PetStore',-->
+<!--      url: 'https://petstore.swagger.io/v2/swagger.json'-->
+<!--    },-->
+<!--    {-->
+<!--      name: 'Instagram',-->
+<!--      url: 'https://api.apis.guru/v2/specs/instagram.com/1.0.0/swagger.yaml'-->
+<!--    },-->
+<!--    {-->
+<!--      name: 'Google Calendar',-->
+<!--      url: 'https://api.apis.guru/v2/specs/googleapis.com/calendar/v3/swagger.yaml'-->
+<!--    }-->
+<!--  ];-->
+
+<!--  // initially render first API-->
+<!--  Redoc.init(apis[0].url);-->
+
+<!--  function onClick() {-->
+<!--    var url = this.getAttribute('data-link');-->
+<!--    Redoc.init(url);-->
+<!--  }-->
+
+<!--  // dynamically building navigation items-->
+<!--  var $list = document.getElementById('links_container');-->
+<!--  apis.forEach(function(api) {-->
+<!--    var $listitem = document.createElement('li');-->
+<!--    $listitem.setAttribute('data-link', api.url);-->
+<!--    $listitem.innerText = api.name;-->
+<!--    $listitem.addEventListener('click', onClick);-->
+<!--    $list.appendChild($listitem);-->
+<!--  });-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
