@@ -4,5 +4,5 @@ icon: fas fa-user
 order: 7
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+<!-- load remote readme file from github -->
+{% remote_markdown https://raw.githubusercontent.com/Rolinh/jekyll-remote-markdown/master/README.md %}
